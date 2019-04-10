@@ -6,7 +6,7 @@
 
 //////////////////////////////////////////////////
 BTN_t *createExpressionTree(char *expression);
-BTN_t *createExpressionTreeSlave(Queue_t *Q);
+BTN_t *createExpressionTreeSlave(QUEUE_t *Q);
 bool destroyExpressionTree(BTN_t *R);
 int getTypeOfOperatorOnET(char *token);
 void viewExpressionTree(BTN_t *R);

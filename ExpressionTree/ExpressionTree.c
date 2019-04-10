@@ -10,7 +10,7 @@
 //////////////////////////////////////////////////
 BTN_t *createExpressionTree(char *expression) {
     // Reverse the order of the queues.
-    Queue_t *Q = convertQueueToRPN(expression);
+    QUEUE_t *Q = convertQueueToRPN(expression);
     Stack_t *S = createStack();
     while (!isEmptyQueue(Q)) {
         void *element = deQueue(Q);
@@ -27,7 +27,7 @@ BTN_t *createExpressionTree(char *expression) {
     return root;
 }
 
-BTN_t *createExpressionTreeSlave(Queue_t *Q) {
+BTN_t *createExpressionTreeSlave(QUEUE_t *Q) {
     if (isEmptyQueue(Q)) return NULL;
     
     char *token = deQueue(Q);
